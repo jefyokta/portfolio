@@ -12,6 +12,8 @@ const DrStrange = () => {
     const [opacity, setOpacity] = useState<number>(0)
     const { setSectionName } = useScrollContext();
 
+    
+
     useEffect(() => {
         const handleScroll = () => {
             if (sectionRef.current) {
@@ -73,7 +75,7 @@ const DrStrange = () => {
             }}
             ref={sectionRef}
         >
-            <img src="/images/masker.png" className="absolute opacity-1 h-auto" alt="mask"
+            <img src={`${import.meta.env.BASE_URL}images/masker.png`} className="absolute opacity-1 h-auto" alt="mask"
                 style={{
                     zIndex: 60, transform: `translateY(${top * -.75}px)`,
                     transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
@@ -81,14 +83,14 @@ const DrStrange = () => {
 
                 }}
             />
-            <img src="/images/head.png" className="absolute" alt="head"
+            <img src={`${import.meta.env.BASE_URL}/images/head.png`} className="absolute" alt="head"
                 style={{
                     opacity: opacity,
                     transform: `translateY(${top * -.7}px)`,
                     transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
                 }}
             />
-            <img src="/images/righthand.png" className="absolute opacity-1 mb-10 md:mb-5 -right-48 md:right-64" alt="right hand"
+            <img src={`${import.meta.env.BASE_URL}/images/righthand.png`} className="absolute opacity-1 mb-10 md:mb-5 -right-48 md:right-64" alt="right hand"
                 style={{
                     zIndex: 53,
                     transform: `translateY(${top * -0.8}px) translateX(${top * .6}px) rotate(${top * .05}deg)`,
@@ -97,14 +99,14 @@ const DrStrange = () => {
                 }}
                 ref={handRef}
             />
-            <img src="/images/lefthand.png" className="absolute z-50" alt="left hand"
+            <img src={`${import.meta.env.BASE_URL}/images/lefthand.png`} className="absolute z-50" alt="left hand"
                 style={{
                     opacity: opacity, transform: `translateY(${top * -.7}px) rotate( ${top * -.01}deg) translateX(${top * -.06}px)`,
                     transition: 'transform 0.5s ease-out, opacity 0.7s ease-out',
 
                 }}
             />
-            <img src="/images/body.png" className="absolute" alt="body"
+            <img src={`${import.meta.env.BASE_URL}/images/body.png`} className="absolute" alt="body"
                 style={{
                     opacity: opacity, transform: `translateY(${top * -.7}px)`,
                     transition: 'transform 0.5s ease-out, opacity 0.5s ease-out',
